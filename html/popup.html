@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>VK Manager</title>
+
+    <!-- App css -->
+    <link href="../css/popup.css" rel="stylesheet">  
+
+    <!-- Bootstrap -->
+    <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">  
+
+    <link rel="stylesheet" href="../vendor/alertify/alertify.css" />
+
+    <link rel="stylesheet" href="../vendor/alertify/semantic.css" />
+
+</head>
+<body>
+
+<div class="well my_margin" id="login">
+    <button type="button" class="btn btn-lg btn-primary center-block" id="signInVK">Sign in VK</button>
+</div>
+
+<div id="wrap">
+    <div role="tabpanel">
+        <!-- Nav tabs -->
+        <ul class="nav nav-pills  navbar-default" role="tablist" id="mainTabs">
+            <li role="presentation" class="active">
+                <a id="profileTab" href="#profile" aria-controls="profile" role="tab" data-toggle="tab">Profile</a>
+            </li>
+
+            <li role="presentation">
+                <a id="messageTab" href="#messages" aria-controls="messages" role="tab" data-toggle="tab">Messages 
+                    <span class="badge" style="display: none;" id="messageBadge">0</span></a>
+            </li>
+
+            <li role="presentation">
+                <a id="audioTab" href="#audio" aria-controls="audio" role="tab" data-toggle="tab">Audio
+                    <span class="label label-default" id="audioLabel" style="display: none;">0</span>
+                </a>
+            </li>
+
+            <li role="presentation">
+                <a id="exitTab" href="#profile" aria-controls="profile" role="tab" data-toggle="tab">Exit</a>
+            </li>
+
+         </ul>
+        <!-- Tab panes -->
+        <div class="tab-content">
+            <div role="tabpanel" class="tab-pane fade in active" id="profile">
+
+                <img class="loaderImg" style="display: block; width: 50px; height: 50px; margin: 20px auto;" src="../img/ajax_loader_blue.gif">
+
+                <div id="profileContent">
+                    <div id="profileHeader">
+                        <img id="profilePhoto" data-holder-rendered="true" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9InllcyI/PjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iMTQwIiBoZWlnaHQ9IjE0MCIgdmlld0JveD0iMCAwIDE0MCAxNDAiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPjxkZWZzLz48cmVjdCB3aWR0aD0iMTQwIiBoZWlnaHQ9IjE0MCIgZmlsbD0iI0VFRUVFRSIvPjxnPjx0ZXh0IHg9IjQzLjUiIHk9IjcwIiBzdHlsZT0iZmlsbDojQUFBQUFBO2ZvbnQtd2VpZ2h0OmJvbGQ7Zm9udC1mYW1pbHk6QXJpYWwsIEhlbHZldGljYSwgT3BlbiBTYW5zLCBzYW5zLXNlcmlmLCBtb25vc3BhY2U7Zm9udC1zaXplOjEwcHQ7ZG9taW5hbnQtYmFzZWxpbmU6Y2VudHJhbCI+MTQweDE0MDwvdGV4dD48L2c+PC9zdmc+" style="width: 140px; height: 140px;" data-src="holder.js/140x140" class="img-circle inlineBlock" alt="140x140">
+
+                        <div class="page-header inlineBlock">
+                            <h1 id="name">SerName Name</h1>
+                            <h1><small id="status">Status</small></h1>
+                            <h1><small id="place">Country, City</small></h1>
+                        </div>
+
+                    </div>
+
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">About</h3>
+                        </div>
+                        <div class="panel-body" id="otherInfo">
+                            About field
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            
+
+            <div role="tabpanel" class="tab-pane fade " id="messages">
+
+                <img class="loaderImg" style="display: block; width: 50px; height: 50px; margin: 20px auto;" src="../img/ajax_loader_blue.gif">
+
+                <div class="list-group" id="dialogList">
+                    <a href="#" class="list-group-item">dialog 1</a>
+                    <a href="#" class="list-group-item">dialog 2</a>
+                    <a href="#" class="list-group-item">dialog 3</a>
+                    <a href="#" class="list-group-item">dialog 4</a>
+                    <a href="#" class="list-group-item">dialog 5</a>
+                </div>
+
+            </div>
+
+
+            <div role="tabpanel" class="tab-pane fade " id="audio">
+
+                <div class="well center-block my_margin" style="width: 400px">
+
+                    <div class="btn-group" role="group" aria-label="...">
+                        <button type="button" class="btn btn-default" id="prevBtn">
+                            <span class="glyphicon glyphicon-step-backward" aria-hidden="true" id="prevSpan"></span> 
+                            Prev
+                        </button>
+                        <button type="button" class="btn btn-default" id="playBtn">
+                            <span class="glyphicon glyphicon-play" aria-hidden="true" id="playSpan"></span> 
+                            <!--glyphicon-pause-->
+                            <span id="playText">Play</span>
+                        </button>
+                        <button type="button" class="btn btn-default" id="nextBtn">
+                            <span class="glyphicon glyphicon-step-forward" aria-hidden="true" id="nextSpan"></span> 
+                            Next
+                        </button>
+
+                        <!-- Volume's buttons -->
+                        <div class="btn-group" role="group" aria-label="..." id="volumeChange" style="display:none">
+                            <button type="button" class="btn btn-default" id="volumeDownBtn">
+                                <span class="glyphicon glyphicon-minus" aria-hidden="true"></span>
+                            </button>
+
+                            <button type="button" class="btn btn-default" id="volumeUpBtn">
+                                <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+                            </button>
+                        </div>
+
+                        <button type="button" class="btn btn-default" id="volumeBtn">
+                            <span class="glyphicon glyphicon-volume-up" aria-hidden="true"></span> 
+                            <!--glyphicon-volume-off glyphicon-volume-down -->
+                        </button>
+
+                        <button type="button" class="btn btn-default" id="downloadBtn">
+                            <span class="glyphicon glyphicon-cloud-download" aria-hidden="true"></span> 
+                        </button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+    <script src="../vendor/js/twemoji.min.js"></script>
+    
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="../vendor/jquery/jquery-1.11.2.js"></script>
+
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="../vendor/bootstrap/js/bootstrap.min.js"></script>
+
+    <script src="../vendor/alertify/alertify.js"></script>
+
+    <script src="../vendor/js/sprintf.js"></script>
+
+    <!-- Include app (Chrome extension) js -->
+    <script src="../js/popup.js"></script>
+
+</body>
+</html>

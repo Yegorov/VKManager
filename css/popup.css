@@ -1,0 +1,17 @@
+#wrap {
+    width: 525px; 
+    /*height: 300px;*/
+}
+
+#status {
+    /*font-size: 35%;*/
+}
+
+.my_margin {
+    margin: 10px;
+}
+
+.inlineBlock{
+    display: inline-block;
+    vertical-align: middle;
+}

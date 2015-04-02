@@ -1,0 +1,32 @@
+{
+    "manifest_version": 2,
+    "name": "VK manager",
+    "version": "1.0.0",
+
+    "icons": {
+        "256": "img/icon256.png",
+        "150": "img/icon150.png",
+        "128": "img/icon128.png",
+        "64": "img/icon64.png",
+        "32": "img/icon32.png"
+    },
+
+    "permissions": [
+        "downloads",
+        "tabs",
+        "http://*/*", 
+        "https://*/*",
+        "notifications" 
+    ],
+
+    "background": {
+        "scripts": ["js/background.js"]
+    },
+
+    "browser_action": {
+        "default_title": "VKManager",
+        "default_icon": "img/icon256.png",
+        "default_popup": "html/popup.html"
+    }
+
+}

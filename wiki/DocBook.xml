@@ -1,0 +1,151 @@
+<?xml version='1.0'?>
+<!DOCTYPE book PUBLIC "-//OASIS//DTD DocBook V5.0//EN"
+"http://www.oasis-open.org/docbook/xml/5.0/docbook.dtd">
+
+<book lang="ru">
+  <title>VKManager</title>
+  <subtitle>Расширение для браузера с движками "Blink"</subtitle>
+  <bookinfo lang="ru" id="bookinfo">
+    <author>
+      <firstname>Артем</firstname>
+      <surname>Егоров</surname>
+      <email>yegorov0725@yandex.ru</email>
+    </author>
+    <date>2015.04.01</date>
+
+    <revhistory>
+      <revision>
+        <revnumber>0.1</revnumber>
+        <date>2015.04.01</date>
+        <revdescription>
+          <para>
+            Добавлено описание разработанного продукта
+          </para>
+        </revdescription>
+      </revision>
+    </revhistory>
+  </bookinfo>
+
+  <chapter lang="ru">
+    <title>Краткое описание VKManager</title>
+    <sect1>
+
+      <sect2>
+        <title>Обзор</title>
+        <para>Простой доступ к функциям сайта vk.com из расширения</para>
+      </sect2>
+
+      <sect2>
+        <title>Возможности</title>
+        <para>
+          <itemizedlist>
+            <listitem>
+              <para>
+                Отображение главной информации о пользователе (аватар, имя, статус, город, страна и "о себе")
+              </para>
+            </listitem>
+            <listitem>
+              <para>
+                Просмотр 5 последних сообщений из диалогов, с ссылками на них
+              </para>
+            </listitem>
+            <listitem>
+              <para>
+                Выход из расширения происходит по нажатию кнопки "Выход" или при закрытии браузера
+              </para>
+            </listitem>
+            <listitem>
+              <para>
+                Фоновый аудиоплеер
+              </para>
+            </listitem>
+            <listitem>
+              <para>
+                Уведомление с исполнителем и названием мелодии, при изменении текущей композиции
+              </para>
+            </listitem>
+            <listitem>
+              <para>
+                Автоматический переход на следующую композицию при окончании текущей
+              </para>
+            </listitem>
+            <listitem>
+              <para>
+                Сохранение проигываемой композиции на локальный компьютер
+              </para>
+            </listitem>
+          </itemizedlist>
+        </para>
+      </sect2>
+
+      <sect2>
+        <title>Использование</title>
+        <para> 
+          <orderedlist>
+            <listitem>
+              <para>
+                Откройте Google Chrome (Если его нет, то скачайте <ulink url="https://www.google.ru/chrome/browser/desktop/">отсюда</ulink>
+              </para>
+            </listitem>
+            <listitem>
+              <para>
+                Нажмите на кнопку главное меню (в виде 3 горизонтальных линий) -> Дополнительные инструменты -> Расширения.
+              </para>
+            </listitem>
+            <listitem>
+              <para>
+                Нажмите на кнопку "Загрузка распакованного расширения"
+              </para>
+            </listitem>
+            <listitem>
+              <para>
+                Выберите каталог с расширением
+              </para>
+            </listitem>
+          </orderedlist>
+        </para>
+      </sect2>
+
+      <sect2>
+        <title>Используемые библиотеки</title>
+        <para>
+          <itemizedlist>
+            <listitem>
+              <para>
+                <ulink url="http://getbootstrap.com/">Bootstrap</ulink>
+              </para>
+            </listitem>
+            <listitem>
+              <para>
+                <ulink url="http://jquery.com/">JQuery</ulink>
+              </para>
+            </listitem>
+            <listitem>
+              <para>
+                <ulink url="https://github.com/alexei/sprintf.js">sprintf.js</ulink>
+              </para>
+            </listitem>
+            <listitem>
+              <para>
+                <ulink url="http://alertifyjs.com/">alertify.js</ulink>
+              </para>
+            </listitem>
+            <listitem>
+              <para>
+                <ulink url="https://github.com/twitter/twemoji">twemoji</ulink>
+              </para>
+            </listitem>
+            <listitem>
+              <para>
+                Часть кода для авторизации ВКонтакте взята <ulink url="https://github.com/crea7or/vk.com-rehosting-in-docs">отсюда</ulink>
+              </para>
+            </listitem>
+          </itemizedlist>
+        </para>
+      </sect2>
+
+    </sect1>
+    
+  </chapter>
+
+</book>
